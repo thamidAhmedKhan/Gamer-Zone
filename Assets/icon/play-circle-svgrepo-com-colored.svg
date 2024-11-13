@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fullGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF42A5; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF42A5; stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="12" cy="12" r="10" stroke="url(#fullGradient)" stroke-width="2.5" fill="none"/>
+  <path d="M14 12L11 13.7321L11 10.2679L14 12Z" fill="url(#fullGradient)" stroke="url(#fullGradient)" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
