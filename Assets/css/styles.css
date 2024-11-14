@@ -14,7 +14,6 @@
 
 section:not(.banner_sec) {
     padding: 1rem;
-
 }
 
 ul {
@@ -23,25 +22,27 @@ ul {
 
 .btn_1 {
     color: #ffffff;
-    height: 65px;
-    padding: 21px 40px;
+    /* 
+    height: 65px; */
+    padding: 10px 20px;
     background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
     border-radius: 48px;
     border: 0px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 520;
     text-transform: uppercase;
 }
 
 .btn_2 {
     color: #ffffff;
-    height: 65px;
-    padding: 21px 40px;
-    background: #4EC5F7;;
+    /* 
+    height: 65px; */
+    padding: 10px 20px;
+    background: #4EC5F7;
     border-radius: 48px;
     border: 0px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 520;
     text-transform: uppercase;
 }
 
@@ -52,12 +53,21 @@ ul {
 }
 
 /* header section */
-/* nav section */
+/*
+_____________________
+     nav section
+_____________________
+*/
+
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.nav {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .logo_name {
@@ -67,7 +77,7 @@ nav {
 }
 
 .logo_name_G {
-    color: linear-gradient(#F948B2 #8758F1);
+    color: #FF42A5;
 }
 
 .links>ul li:nth-child(1),
@@ -100,40 +110,48 @@ nav {
 }
 
 /* main section */
-/* banner section */
+/*
+_____________________
+    banner section 
+_____________________
+*/
 .banner {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 
-.banner_description,
-.banner_img {
-    width: 50%;
+.banner_description_container {
+    width: 55%;
 }
 
-.banner_description {
+.banner_img {
+    width: 45%;
+}
+
+.banner_description_container {
     background-image: url('../images/Group\ 14.png');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
+}
+
+.banner_description {
     flex-direction: column;
     align-items: flex-start;
-    padding: 50px;
 }
 
 .b_d_head div:nth-child(1) {
     color: #0B0223;
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 600;
     text-transform: uppercase;
     padding: 0 .5rem;
 }
 
 .b_d_head div:nth-child(2) {
-    color: #F948B2;
-    font-size: 95px;
+    font-size: 4rem;
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -145,19 +163,183 @@ nav {
 }
 
 .b_d_content>ul li {
-    padding: .5rem 0;
+    padding: 0.5rem 0.3rem;
+    font-size: 1rem;
 }
 
-.b_d_btn{
+.b_d_content>ul li>img {
+    width: 1rem;
+}
+
+.b_d_btn {
     padding: 1.5rem 0;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 1.5rem;
     display: inline-flex;
 }
-.banner_img{
+
+.banner_img {
     padding: 1rem;
 }
+
 .banner_img>img {
     width: 100%;
+}
+
+/* 
+______________________________________
+    we are Gamer banner Section
+______________________________________
+*/
+.w_G_b_container {
+    background: rgb(255, 66, 165, 0.04);
+}
+
+.w_Gamer_banner {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.w_gamer_img {
+    width: 57%;
+    padding: 0.5rem;
+}
+
+.w_gamer_img>img {
+    width: 100%;
+}
+
+.w_g_description {
+    width: 43%;
+}
+
+.w_g_description {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.w_g_d_head {
+    font-size: 2.5rem;
+    margin: .5rem 0;
+    font-weight: 600;
+}
+
+.w_g_d_content {
+    text-align: end;
+    font-size: small;
+    line-height: 1.3rem;
+    color: #534C64;
+    margin: .5rem 0;
+}
+
+.w_g_d_btn {
+    margin: .8rem 0;
+}
+
+.w_g_d_proverb {
+    text-align: end;
+    color: #534C64;
+    margin: .3rem 0;
+}
+
+.w_g_d_proverb span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+/* responsive Layout */
+/*
+________________________________________
+    Custom media queries for tablet
+________________________________________ 
+*/
+
+@media screen and (min-width: 576px) and (max-width: 960px) {
+
+    .banner_description {
+        padding: 2rem 0;
+    }
+
+    .b_d_btn {
+        padding: .5rem 0;
+    }
+}
+
+/*
+________________________________________
+    Custom media queries for mobile
+________________________________________ 
+*/
+
+@media screen and (max-width: 576px) {
+
+    nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .links>ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner_description_container {
+        order: 2;
+    }
+
+    .b_d_btn {
+        padding: .5rem 0;
+    }
+
+    .banner_img {
+        order: 1;
+    }
+
+    .banner_description_container,
+    .banner_img {
+        width: 100%;
+    }
+
+    .banner_description {
+        padding: 1.5rem;
+    }
+
+    .w_Gamer_banner {
+        flex-direction: column;
+    }
+
+    .w_gamer_img {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .w_g_description {
+        width: 100%;
+    }
+
+    .w_g_description {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .w_g_d_content {
+        text-align: center;
+    }
+
+    .w_g_d_proverb {
+        text-align: center;
+    }
+    .w_g_d_btn {
+        margin: .8rem 0 2rem 0;
+    }
+    
 }
