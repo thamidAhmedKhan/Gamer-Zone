@@ -12,7 +12,7 @@
     align-items: center;
 }
 
-section:not(.banner_sec) {
+section:not(.banner_sec, .careers) {
     padding: 1rem;
 }
 
@@ -22,8 +22,6 @@ ul {
 
 .btn_1 {
     color: #ffffff;
-    /* 
-    height: 65px; */
     padding: 10px 20px;
     background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
     border-radius: 48px;
@@ -35,8 +33,6 @@ ul {
 
 .btn_2 {
     color: #ffffff;
-    /* 
-    height: 65px; */
     padding: 10px 20px;
     background: #4EC5F7;
     border-radius: 48px;
@@ -50,6 +46,20 @@ ul {
     background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.section_head {
+    font-size: 2.5rem;
+    margin: .5rem 0;
+    font-weight: 600;
+}
+
+.section_description_content,
+.s_d_c {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #534C64;
+    margin: .5rem 0;
 }
 
 /* header section */
@@ -156,10 +166,10 @@ _____________________
     text-transform: uppercase;
 }
 
-.b_d_content {
-    color: #534C64;
-    font-size: 20px;
-    font-weight: 500;
+.b_d_content>ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .b_d_content>ul li {
@@ -221,11 +231,6 @@ ______________________________________
     align-items: flex-end;
 }
 
-.w_g_d_head {
-    font-size: 2.5rem;
-    margin: .5rem 0;
-    font-weight: 600;
-}
 
 .w_g_d_content {
     text-align: end;
@@ -251,6 +256,292 @@ ______________________________________
     line-height: 2.3rem;
 }
 
+/*
+______________________________________
+    Funny Gameing video Section
+______________________________________
+*/
+.g_v_head {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.g_v_h_description {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #534C64;
+    margin: .5rem 0;
+}
+
+.g_v_c_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    justify-content: center;
+    align-items: start;
+    align-content: center;
+    justify-items: center;
+}
+
+.g_v_card {
+    width: calc((100vw / 4) - 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.g_v_c_img {
+    position: relative;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: border 0.3s ease;
+}
+
+.g_v_c_img img {
+    width: 100%;
+    display: block;
+    border-radius: inherit;
+}
+
+.g_v_c_img:hover {
+    border: 2px solid #F948B2;
+}
+
+.g_v_c_img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.g_v_c_img:hover::before {
+    opacity: 1;
+}
+
+.overlay-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.g_v_c_img:hover .overlay-content {
+    opacity: 1;
+}
+
+.play-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.watch-now {
+    color: #F948B2;
+    font-size: 1rem;
+}
+
+.g_v_c_img:hover {
+    border: 3px solid #F948B2;
+}
+
+.g_V_C_description {
+    text-align: start;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: #534C64;
+    margin: .5rem 0;
+}
+
+/*
+______________________________________
+    Sub banner-1 Section
+______________________________________
+*/
+
+.s_banner_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 4rem 0;
+}
+
+.s_b_d_1_container {
+    order: 1;
+}
+
+.s_b_description {
+    width: 45%;
+}
+
+.s_b_description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: .7rem;
+}
+
+.s_b_d_1_head,
+.s_b_d_1_content {
+    text-align: end;
+}
+
+.s_b_1_imgs {
+    order: 2;
+    align-items: flex-end;
+}
+
+.s_b_imgs {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    position: relative;
+}
+
+.s_b_img-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1.1;
+    overflow: hidden;
+    position: relative;
+    width: 80%;
+    min-width: 280px;
+}
+
+.s_b_img-2 {
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    aspect-ratio: 1 / 1.1;
+    overflow: hidden;
+    border: .5rem solid #ffffff;
+    border-radius: .5rem;
+}
+
+.s_b_1_img-2 {
+    position: absolute;
+    top: 55%;
+    right: 55%;
+}
+
+.s_b_img-2>img,
+.s_b_img-1>img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*
+______________________________________
+    Sub banner-2 Section
+______________________________________
+*/
+.s_b_d_2_container {
+    order: 2;
+}
+
+.s_b_2_description {
+    align-items: flex-start;
+}
+
+.s_b_d_2_head,
+.s_b_d_2_content {
+    text-align: start;
+}
+
+.s_b_2_imgs {
+    order: 1;
+    align-items: flex-start;
+}
+
+.s_b_2_img-2 {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+}
+
+/*
+______________________________________
+    Careers Section
+______________________________________
+*/
+.career_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #FF42A5;
+    color: white;
+    padding: 5rem 0;
+}
+
+.c_d_container {
+    width: 50%;
+    flex-direction: column;
+}
+
+.career_discription {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.career_text {
+    width: 100%;
+}
+
+.career_text p {
+    color: #ffffff;
+}
+
+.career_list {
+    width: 100%;
+}
+
+.job {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.see_positions {
+    padding: .8rem 1.6rem;
+    background-color: white;
+    color: #FF42A5;
+    border: none;
+    border-radius: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.career_image {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.career_image img {
+    width: 100%;
+    height: auto;
+}
+
+
 /* responsive Layout */
 /*
 ________________________________________
@@ -267,6 +558,64 @@ ________________________________________
     .b_d_btn {
         padding: .5rem 0;
     }
+
+    .w_Gamer_banner {
+        flex-direction: column;
+    }
+
+    .w_gamer_img {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .w_g_description {
+        width: 100%;
+    }
+
+    .w_g_description {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .w_g_d_content {
+        text-align: center;
+        width: 85%;
+    }
+
+    .w_g_d_proverb {
+        text-align: center;
+    }
+
+    .w_g_d_btn {
+        margin: .8rem 0 2rem 0;
+    }
+
+
+    .g_v_c_container {
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    .g_v_card {
+        width: calc((100vw / 2) - 2rem);
+    }
+
+    .career_section {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .career_text,
+    .career_list,
+    .career_image {
+        text-align: center;
+    }
+
+    .c_d_container,
+    .career_image {
+        width: 100%;
+    }
 }
 
 /*
@@ -276,6 +625,9 @@ ________________________________________
 */
 
 @media screen and (max-width: 576px) {
+    .section_head {
+        font-size: 1.7rem;
+    }
 
     nav {
         flex-direction: column;
@@ -338,8 +690,62 @@ ________________________________________
     .w_g_d_proverb {
         text-align: center;
     }
+
     .w_g_d_btn {
         margin: .8rem 0 2rem 0;
     }
-    
+
+    .g_v_c_container {
+        grid-template-columns: 1fr;
+    }
+
+    .g_v_card {
+        width: 80vw;
+    }
+
+    .s_banner_container {
+        flex-direction: column;
+    }
+
+    .s_b_imgs {
+        width: 95%;
+    }
+
+    .s_b_description {
+        align-items: center;
+        width: 70%;
+    }
+
+    .s_b_d_1_head,
+    .s_b_d_1_content,
+    .s_b_d_2_head,
+    .s_b_d_2_content {
+        text-align: center;
+    }
+
+    .s_b_d_2_container {
+        order: 1;
+    }
+
+    .s_b_2_imgs {
+        order: 2;
+    }
+
+    .career_section {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .c_d_container,
+    .career_image {
+        width: 100%;
+    }
+
+    .job span {
+        width: 40%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }
