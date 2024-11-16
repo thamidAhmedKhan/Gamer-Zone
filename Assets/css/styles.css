@@ -1,3 +1,14 @@
+:root {
+    --primary-color: #FF42A5;
+    --secondary-color: #4EC5F7;
+    --text-color: #534C64;
+    --text-white: #ffffff;
+    --bg-color: #0B0223;
+    --gradient-text: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+    --font-family: 'Work Sans', sans-serif;
+    --border-radius: 1.5rem;
+}
+
 /* for all */
 * {
     margin: 0;
@@ -25,9 +36,9 @@ ul {
 }
 
 .btn_1 {
-    color: #ffffff;
+    color:  var(--text-white);
     padding: 10px 20px;
-    background: linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%);
+    background: var(--primary-color);
     border-radius: 48px;
     border: 0px;
     font-size: 1rem;
@@ -36,9 +47,9 @@ ul {
 }
 
 .btn_2 {
-    color: #ffffff;
+    color:  var(--text-white);
     padding: 10px 20px;
-    background: #4EC5F7;
+    background:  var(--secondary-color);
     border-radius: 48px;
     border: 0px;
     font-size: 1rem;
@@ -62,7 +73,7 @@ ul {
 .s_d_c {
     font-size: 1rem;
     line-height: 1.3rem;
-    color: #534C64;
+    color: var(--text-color);
     margin: .5rem 0;
 }
 
@@ -91,7 +102,7 @@ nav {
 }
 
 .logo_name_G {
-    color: #FF42A5;
+    color: var(--primary-color);
 }
 
 .links>ul li:nth-child(1),
@@ -240,7 +251,7 @@ ______________________________________
     text-align: end;
     font-size: small;
     line-height: 1.3rem;
-    color: #534C64;
+    color: var(--text-color);
     margin: .5rem 0;
 }
 
@@ -250,7 +261,7 @@ ______________________________________
 
 .w_g_d_proverb {
     text-align: end;
-    color: #534C64;
+    color: var(--text-color);
     margin: .3rem 0;
 }
 
@@ -274,7 +285,7 @@ ______________________________________
     text-align: center;
     font-size: 1rem;
     line-height: 1.3rem;
-    color: #534C64;
+    color: var(--text-color);
     margin: .5rem 0;
 }
 
@@ -310,7 +321,7 @@ ______________________________________
 }
 
 .g_v_c_img:hover {
-    border: 2px solid #F948B2;
+    border: 2px solid var(--primary-color);
 }
 
 .g_v_c_img::before {
@@ -352,19 +363,19 @@ ______________________________________
 }
 
 .watch-now {
-    color: #F948B2;
+    color: var(--primary-color);
     font-size: 1rem;
 }
 
 .g_v_c_img:hover {
-    border: 3px solid #F948B2;
+    border: 3px solid var(--primary-color);
 }
 
 .g_V_C_description {
     text-align: start;
     font-size: 1rem;
     line-height: 1.3rem;
-    color: #534C64;
+    color: var(--text-color);
     margin: .5rem 0;
 }
 
@@ -432,7 +443,7 @@ ______________________________________
     justify-content: center;
     aspect-ratio: 1 / 1.1;
     overflow: hidden;
-    border: .5rem solid #ffffff;
+    border: .5rem solid  var(--text-white);
     border-radius: .5rem;
 }
 
@@ -486,8 +497,8 @@ ______________________________________
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    background-color: #FF42A5;
-    color: white;
+    background-color: var(--primary-color);
+    color:  var(--text-white);
     padding: 5rem 0;
 }
 
@@ -510,7 +521,7 @@ ______________________________________
 }
 
 .career_text p {
-    color: #ffffff;
+    color: var(--text-white);
 }
 
 .career_list {
@@ -537,8 +548,8 @@ ______________________________________
 
 .see_positions {
     padding: .8rem 1.6rem;
-    background-color: white;
-    color: #FF42A5;
+    background-color:  var(--text-white);
+    color: var(--primary-color);
     border: none;
     border-radius: 1.5rem;
     font-weight: bold;
@@ -580,9 +591,9 @@ ______________________________________
 }
 
 .category_card:hover {
-    border: #F948B2 solid 2px;
+    border: var(--primary-color) solid 2px;
     border-radius: 3rem;
-    color: #F948B2;
+    color: var(--primary-color);
     padding: .5rem;
 }
 
@@ -622,7 +633,7 @@ ______________________________________
     align-items: center;
 }
 
-.logo-container {
+.footer_logo-container {
     display: flex;
     align-items: center;
     gap: 20px;
@@ -630,7 +641,7 @@ ______________________________________
     font-weight: 700;
 }
 
-.logo {
+.f_logo {
     width: 86px;
     height: 40px;
     object-fit: contain;
