@@ -309,6 +309,7 @@ ______________________________________
 .g_v_c_img {
     position: relative;
     width: 100%;
+    aspect-ratio: 286 / 334;;
     border-radius: 1rem;
     overflow: hidden;
     transition: border 0.3s ease;
